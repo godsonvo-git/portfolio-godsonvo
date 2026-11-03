@@ -1,0 +1,135 @@
+/* ===== Palette tokens: Minimalist Tech ===== */
+:root,
+[data-theme="light"]{
+  --bg:#F8FAFC;          /* soft ice */
+  --surface:#FFFFFF;
+  --alt:#FFFFFF;         /* alternate section background */
+  --text:#0F172A;        /* ink black */
+  --muted:#475569;
+  --accent:#4F46E5;      /* vibrant indigo */
+  --on-accent:#FFFFFF;
+  --brand:#4F46E5;
+  --border:#E2E8F0;
+  --bar:#0F172A;         /* header / hero / footer */
+  --on-bar:#F8FAFC;
+  --data:#059669;        /* jade green: positive metrics */
+
+  /* toggle */
+  --toggle-bg:#F3F7FC;
+  --toggle-thumb:#DCE6F1;
+  --toggle-icon:#0B2545;
+  --toggle-icon-off:#8FA2B8;
+}
+
+/* Dark: Minimalist Tech at night */
+[data-theme="dark"]{
+  --bg:#0B1120;
+  --surface:#111A2E;
+  --alt:#0F172A;
+  --text:#F1F5F9;
+  --muted:#94A3B8;
+  --accent:#6366F1;
+  --on-accent:#FFFFFF;
+  --brand:#818CF8;
+  --border:#1E293B;
+  --bar:#020617;
+  --on-bar:#F1F5F9;
+  --data:#34D399;
+
+  --toggle-bg:#0B1220;
+  --toggle-thumb:#3A4A73;
+  --toggle-icon:#FFFFFF;
+  --toggle-icon-off:#8794B3;
+}
+
+/* ===== Sun / Moon toggle ===== */
+.toggle{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;width:88px;height:44px;padding:4px;border:0;border-radius:999px;background:var(--toggle-bg);cursor:pointer;flex-shrink:0;transition:background .3s ease}
+.toggle .thumb{position:absolute;top:4px;left:4px;width:40px;height:36px;border-radius:999px;background:var(--toggle-thumb);transition:transform .3s ease,background .3s ease}
+.toggle[aria-checked="true"] .thumb{transform:translateX(40px)}
+.toggle .icon{position:relative;z-index:1;display:grid;place-items:center;height:36px;transition:color .3s ease}
+.toggle .icon svg{width:22px;height:22px}
+.icon-sun{color:var(--toggle-icon)}
+.icon-moon{color:var(--toggle-icon-off)}
+.toggle[aria-checked="true"] .icon-sun{color:var(--toggle-icon-off)}
+.toggle[aria-checked="true"] .icon-moon{color:var(--toggle-icon)}
+
+/* ===== Base ===== */
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(90px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,sans-serif;transition:background .3s,color .3s}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bar);z-index:10}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.15;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bar);color:var(--on-bar)}
+.nav .wrap{display:flex;align-items:center;gap:16px;height:64px}
+.logo{font:700 18px "Space Grotesk",sans-serif;color:var(--on-bar);text-decoration:none;white-space:nowrap}
+.logo b{color:var(--accent)}
+.links{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.links a{color:var(--on-bar);opacity:.8;text-decoration:none;padding:8px 12px;border-radius:8px;font-size:14px;white-space:nowrap}
+.links a:hover{opacity:1;background:rgba(255,255,255,.1)}
+section{padding:72px 0}
+section.alt{background:var(--alt)}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);margin-bottom:10px}
+h2{font-size:clamp(26px,4vw,36px);margin-bottom:20px}
+p{margin:0 0 14px;color:var(--muted)}
+.hero{background:var(--bar);color:var(--on-bar);padding:84px 0 72px}
+.hero h1{font-size:clamp(32px,6vw,56px);max-width:18ch}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:var(--on-bar);opacity:.8;max-width:56ch;font-size:18px;margin-top:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chip{border:1px solid rgba(255,255,255,.25);padding:5px 12px;border-radius:999px;font-size:13px}
+.btn{display:inline-block;margin-top:28px;background:var(--accent);color:var(--on-accent);padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none}
+.grid{
+  display:grid;
+  gap:18px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr))
+}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px}
+.card h3{font-size:18px;margin-bottom:8px}
+.card p{margin:0;font-size:15px}
+.stat{font:700 34px "Space Grotesk",sans-serif;color:var(--data)}
+.avatar{width:56px;height:56px;border-radius:50%;background:var(--brand);color:var(--surface);display:grid;place-items:center;font:700 20px "Space Grotesk",sans-serif;margin-bottom:14px}
+.role{color:var(--brand);font-size:13px;font-weight:600}
+.steps{counter-reset:s;display:grid;gap:14px}
+.step{display:flex;gap:16px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px 20px}
+.step::before{counter-increment:s;content:counter(s);flex:none;width:36px;height:36px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:700 16px "Space Grotesk",sans-serif}
+.step h3{font-size:17px;margin-bottom:4px}
+.step p{margin:0;font-size:15px}
+.split{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start}
+ul.ticks{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+ul.ticks li{padding-left:28px;position:relative;color:var(--muted)}
+ul.ticks li::before{content:"";position:absolute;left:0;top:7px;width:14px;height:8px;border-left:2.5px solid var(--accent);border-bottom:2.5px solid var(--accent);transform:rotate(-45deg)}
+figure{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px}
+figure svg{width:100%;height:auto;display:block;color:var(--brand)}
+figcaption{font-size:13px;color:var(--muted);margin-top:10px}
+.note{border-left:4px solid var(--accent);background:var(--surface);padding:14px 18px;border-radius:0 10px 10px 0;font-size:14px;color:var(--muted);margin-top:22px}
+footer{background:var(--bar);color:var(--on-bar);padding:36px 0;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer p{color:var(--on-bar);opacity:.75;margin:0}
+
+
+#reported{
+  margin: 0px 0px 0px 20px;
+  border: none;
+  cursor: pointer;
+}
+#reported:hover{
+  background-color: #7375f2;
+}
+#reported:active{
+  transform: translatex(2px) scale(0.97);
+}
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.drw1, .drw2, .drw3{
+  width: 200px;
+}
+#arrow1{
+  font-size: 30px;
+  margin: 0px 0px 0px 10px;
+}

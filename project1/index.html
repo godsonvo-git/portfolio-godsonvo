@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Automated Chair-cum-Bed Mechanism – Case Study</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<!-- Basic Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+<!-- Filled Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+<!-- Brand Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#top">WheelChair<b>·</b>cum<b>·</b>Bed</a>
+  <nav class="links">
+    <a href="#overview">Overview</a><a href="#team">Team</a><a href="#method">Methodology</a><a href="#product">Final Product</a><a href="#gallery">Images</a><a href="#summary">Summary</a>
+  </nav>
+  <!-- Sun / Moon toggle -->
+      <button id="theme-toggle" class="toggle" role="switch" aria-checked="false" aria-label="Dark mode">
+        <span class="thumb"></span>
+        <span class="icon icon-sun" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2.5M12 19.5V22M4.2 4.2L6 6M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8"/>
+          </svg>
+        </span>
+        <span class="icon icon-moon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/>
+          </svg>
+        </span>
+      </button>
+</div></header>
+
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div class="eyebrow" style="color:var(--accent)">B.Tech Main Project · Mechanical Engineering</div>
+  <h1>Design &amp; Fabrication of an <em>Automated Chair-cum-Bed</em> Mechanism</h1>
+  <p>A fluid-free, voice-controlled rack-and-pinion system that gives bedridden patients comfort, hygiene and independence.</p>
+  <div class="chips"><span class="chip">Rack &amp; Pinion</span><span class="chip">12V DC Motor</span><span class="chip">Worm Gearbox</span><span class="chip">Arduino UNO</span><span class="chip">Voice Control</span></div>
+  <a class="btn" href="#overview">Explore the case study</a><button href="img/GROUP_A4_Project_Report_FINAL_V2.pdf" class="btn" id="reported">View Report</button>
+</div></section>
+
+<section id="overview"><div class="wrap">
+  <div class="eyebrow">Overview</div><h2>Replacing hydraulics with a cleaner, smarter mechanism</h2>
+  <div class="split">
+    <div>
+      <p>Hydraulic hospital beds are heavy, leak-prone and need frequent maintenance. Leaks raise hygiene concerns, and valve or switch controls often force patients to depend on a caregiver for even small posture changes.</p>
+      <p>This project replaces hydraulic actuation with a rack-and-pinion mechanism driven by an electric motor through a self-locking worm gearbox. English voice commands such as “sit”, “sleep” and “stop” let patients adjust posture hands-free, while limit switches, a current sensor and a manual override keep operation safe.</p>
+    </div>
+    <div class="grid" style="grid-template-columns:1fr 1fr">
+      <div class="card"><div class="stat">0</div><p>Hydraulic fluid, so no leakage</p></div>
+      <div class="card"><div class="stat">12V</div><p>DC motor drive</p></div>
+      <div class="card"><div class="stat">3</div><p>Safety layers: limits, current sensing, override</p></div>
+      <div class="card"><div class="stat">1</div><p>Language today (English); more planned</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="team" class="alt"><div class="wrap">
+  <div class="eyebrow">Team</div><h2>The people behind the project</h2>
+  <div class="grid">
+    <div class="card"><div class="avatar">AC</div><h3>Abin C S</h3><div class="role"></div><p>B.Tech Mechanical Engineering</p></div>
+    <div class="card"><div class="avatar">BJ</div><h3>Bleson Joseph</h3><div class="role"></div><p>B.Tech Mechanical Engineering</p></div>
+    <div class="card godson"><div class="avatar">GV</div><h3>Godson V O<i class="bx bx-chevron-right-circle" id="arrow1"></i></h3><div class="role"></div><p>B.Tech Mechanical Engineering</p></div>
+  </div>
+  <div class="grid" style="margin-top:18px">
+    <div class="card"><div class="role">Project Guide</div><h3>Mr. Vishnu Shaji</h3><p>Asst. Prof., Dept. of ME</p></div>
+    <div class="card"><div class="role">Project Co-Guide</div><h3>Dr. Renjish Vijay</h3><p>Asst. Prof., Dept. of ME</p></div>
+  </div>
+  <p style="margin-top:18px;font-size:14px">Vidya Academy of Science &amp; Technology, Thalakkottukara, Thrissur · APJ Abdul Kalam Technological University</p>
+</div></section>
+
+<section id="method"><div class="wrap">
+  <div class="eyebrow">Methodology</div><h2>From problem to validated design</h2>
+  <div class="steps">
+    <div class="step"><div><h3>Identify the need</h3><p>Reviewed the cost, hygiene and accessibility limits of hydraulic beds for patients who need independent posture adjustment.</p></div></div>
+    <div class="step"><div><h3>Design the rack-and-pinion layout</h3><p>A compact configuration with a worm gearbox converts rotary motion into smooth linear movement of the head section.</p></div></div>
+    <div class="step"><div><h3>Model in AutoCAD / SolidWorks</h3><p>2D drawings of the frame, actuator placement and motion zones to plan fabrication and simulation.</p></div></div>
+    <div class="step"><div><h3>Select materials</h3><p>Mild steel tubes, nylon gears and ABS panels, chosen for strength-to-cost ratio, machinability and low maintenance.</p></div></div>
+    <div class="step"><div><h3>Calculate torque, gear ratio and stroke</h3><p>Manual calculations and literature estimates to confirm the motor and gearbox can deliver safe, repeatable actuation.</p></div></div>
+    <div class="step"><div><h3>Integrate controls and test virtually</h3><p>12V DC motor connected to an Arduino UNO with a voice module, then motion speed, load handling and comfort checked through virtual testing.</p></div></div>
+  </div>
+</div></section>
+
+<section id="product" class="alt"><div class="wrap">
+  <div class="eyebrow">Final Product</div><h2>What the design delivers</h2>
+  <div class="split">
+    <div class="grid" style="grid-template-columns:1fr">
+      <div class="card"><h3>Mechanism</h3><p>Rack-and-pinion with worm gearbox: high torque and self-locking, so the bed holds position even when power is off.</p></div>
+      <div class="card"><h3>Voice control</h3><p>Arduino UNO with a voice recognition module and predefined English commands, “sit”, “sleep” and “stop”.</p></div>
+      <div class="card"><h3>Safety</h3><p>Mechanical limiters and limit switches at stroke ends, current sensing for overload shutdown, soft start/stop and a caregiver override switch.</p></div>
+    </div>
+    <div>
+      <h3 style="margin-bottom:14px">Key advantages</h3>
+      <ul class="ticks">
+        <li>Fluid-free: no leaks, cleaner and simpler servicing</li>
+        <li>Compact, modular frame for home and hospital use</li>
+        <li>Smooth, quiet, jerk-free posture transitions</li>
+        <li>Low-cost, energy-efficient electric actuation</li>
+        <li>Modular motor, rack, pinion and gearbox units that are easy to replace</li>
+      </ul>
+      <div class="note"><b>Status:</b> Phase 1 covers the design, CAD layout and virtual validation. Fabrication, load testing and ergonomic trials are planned for the next phase (Nov–Dec).</div>
+    </div>
+  </div>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+  <div class="eyebrow">Images</div><h2>Design drawings</h2>
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(auto,1fr))">
+    <figure>
+      <img class="drw1" src="img/drw1.png" alt="">
+      <figcaption>Fig. 1 – Chair-cum-bed layout (mm)</figcaption>
+    </figure>
+    <figure>
+      <img class="drw2" src="img/drw2.png" alt="">
+      <figcaption>Fig. 2 – Mechanism layout with rack and pinion</figcaption>
+    </figure>
+    <figure>
+      <img class="drw3" src="img/drw3.png" alt="">
+      <figcaption>Fig. 3 – Rotary motion converted to linear displacement</figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<section id="summary" class="alt"><div class="wrap">
+  <div class="eyebrow">Summary</div><h2>A practical, low-maintenance step toward patient independence</h2>
+  <p style="max-width:70ch">Designed and developed a voice-controlled chair–bed mechanism to assist individuals with limited mobility. Integrating a rack-and-pinion mechanism, DC motor, and worm gear arrangement, the system enables smooth chair-to-bed transformation with enhanced stability and safety. Voice-command operation reduces manual effort, promotes independence, and improves user convenience.</p>
+  <div class="grid" style="margin-top:20px">
+    <div class="card"><h3>Future scope</h3><p>Malayalam and Hindi voice support, feedback sensors and closed-loop control. Add new AI features</p></div>
+    <div class="card"><h3>Beyond</h3><p>Lightweight aluminium or composite parts and battery-powered operation.</p></div>
+  </div>
+</div></section>
+</main>
+
+<footer id="footerText">Copyright &copy; Godson V O</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -84,3 +84,23 @@ heroLinks.insertAdjacentHTML(
     applyTheme(next);
   });
 })();
+
+
+
+// arrow button links
+
+const arrows1 = document.getElementById("arrow1")
+const arrows2 = document.getElementById("arrow2")
+const arrows3 = document.getElementById("arrow3")
+
+arrows1.addEventListener("click", () => {
+  window.open("./project1/index.html", "_blank")
+})
+
+arrows2.addEventListener("click", () => {
+  window.open("", "_blank")
+})
+
+arrows3.addEventListener("click", () => {
+  window.open("https://godsonvo-portfolio.vercel.app/", "_blank")
+})
