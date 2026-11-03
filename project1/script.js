@@ -28,8 +28,8 @@ const report1 = document.getElementById("reported")
 const arw1 = document.getElementById("arrow1")
 
 report1.addEventListener("click", () => {
-  window.open("https://www.linkedin.com/in/godsonvo", "_blank")
+  window.open(" img/GROUP_A4_Project_Report_FINAL_V2.pdf", "_blank")
 })
 arw1.addEventListener("click", () => {
-  window.open("img/GROUP_A4_Project_Report_FINAL_V2.pdf", "_blank")
+  window.open("https://www.linkedin.com/in/godsonvo", "_blank")
 })
