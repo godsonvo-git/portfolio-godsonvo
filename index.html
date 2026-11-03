@@ -1,186 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Godson V O — Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="img/icon-1.png">
-  <meta name="description" content="Frontend developer portfolio recreated using only HTML, CSS and JavaScript.">
-  <link rel="stylesheet" href="style.css">
-  <!-- Boxicons CSS -->
-  <!-- Basic Icons -->
-  <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
-  <!-- Filled Icons -->
-  <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
-  <!-- Brand Icons -->
-  <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
-
-  <!-- our project is using icons from Solid, Sharp Thin, Sharp Duotone Thin + Brands -->
-  <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet" />
-  <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet" />
-  <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet" />
-  <link href="/your-path-to-fontawesome/css/sharp-thin.css" rel="stylesheet" />
-  <link href="/your-path-to-fontawesome/css/sharp-duotone-thin.css" rel="stylesheet" />
-
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Godson V O - Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
+<!-- Basic Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+<!-- Filled Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+<!-- Brand Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Custom Interactive Cursor -->
-<div class="custom-cursor" aria-hidden="true">
-  <div class="cursor-dot"></div>
-  <div class="cursor-ring"></div>
+<!-- Markup: <div class="fx-typewriter">TYPEWRITER</div> -->
+<header>
+  <div class="wrap header-inner" href="#top">
+    <div class="fx-voltage" role="img" aria-label="GODSON V O" href="#top">
+  <b aria-hidden="true" style="--i:0">G</b>
+  <b aria-hidden="true" style="--i:1">O</b>
+  <b aria-hidden="true" style="--i:2">D</b>
+  <b aria-hidden="true" style="--i:3">S</b>
+  <b aria-hidden="true" style="--i:4">O</b>
+  <b aria-hidden="true" style="--i:5">N</b>
+  &nbsp;
+  <b aria-hidden="true" style="--i:6">V</b>
+  &nbsp;
+  <b aria-hidden="true" style="--i:7">O</b>
 </div>
+    <div class="header-right">
+      <nav aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#certification">Certification</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-  <header class="site-header" id="top">
-    <nav class="navbar container">
-      <a class="brand" href="#top">Godson V O</a>
-
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
+      <!-- Sun / Moon toggle -->
+      <button id="theme-toggle" class="toggle" role="switch" aria-checked="false" aria-label="Dark mode">
+        <span class="thumb"></span>
+        <span class="icon icon-sun" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2.5M12 19.5V22M4.2 4.2L6 6M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8"/>
+          </svg>
+        </span>
+        <span class="icon icon-moon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/>
+          </svg>
+        </span>
       </button>
-
-      <div class="nav-menu" id="navMenu">
-        <a href="#top" class="home">Home</a>
-        <a href="#what-i-do" class="what">What I do</a>
-        <a href="#proficiency" class="pro">Proficiency</a>
-        <a href="#education" class="edu">Education</a>
-        <a href="#projects" class="projects">Projects</a>
-        <a href="#contact" class="contact">Contact</a>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/godsonvo/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-          <a id="github" href="https://github.com/godsonvo-git" target="_blank" rel="noopener" aria-label="GitHub"><img style="width: 20px; color: white;" src="img/github.png" alt=""></a>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="hero-shapes" aria-hidden="true">
-        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-      </div>
-      <div class="container hero-content">
-        <div class="hero-copy">
-          <h1 class="typing">Hi all, I'm Godson</h1>
-          <p>I'm a passionate Front End developer with experience developing web applications with React.js, and JavaScript Technologies. I am strongly interested in learning new technologies and implementing them in my projects. I'm a self-motivated, disciplined and hardworking individual who is always ready to learn new things and work in a team.</p>
-
-          <div class="hero-socials">
-            <a class="round-btn white" href="mailto:godsonvoofficial@gmail.com" aria-label="Email"><i class="bx bx-paper-plane"></i></a>
-            <a class="round-btn linkedin" href="https://www.linkedin.com/in/godsonvo/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-            <a class="round-btn github" href="https://github.com/godsonvo-git" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img style="width: 25px;" src="img/github.png" alt=""></a>
-            
-          </div>
-          <a class="resume-btn" href="img/GODSON V O Resume V1.pdf" target="_blank" rel="noopener"><i class="bx bx-paperclip"></i><span>View My Resume</span></a>
-        </div>
-      <div class="hero-image">
-      <img src="img/about.jpg" alt="Developer illustration">
     </div>
-
   </div>
+</header>
 
-  <div class="hero-cut" aria-hidden="true"></div>
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero" id="about">
+    <div class="wrap">
+      <h1 class="fx-typewriter">Hi, I’m <span>Godson</span></h1>
+      <p>Mechanical engineering graduate with hands-on experience in CAD design, FEA simulation and manufacturing processes. I enjoy turning rough ideas into reliable, well-documented products, and I’m looking for an entry-level role where I can keep building.</p>
+      <!-- Hero Section -->
+    <div class="row" id="hero-links"></div>
+
+    </div>
+  </section>
+
+  <!-- Work experience -->
+  <section id="experience">
+    <div class="wrap">
+      <h2>Work experience</h2>
+
+      <div class="card job">
+        <div class="when">Aug 2025 – Sep 2025<br>Palakkad, Kerala</div>
+        <div>
+          <h3>Mechanical Engineer Intern</h3>
+          <div class="org">
+            Central Institute of Plastics Engineering & Technology (CIPET)
+          </div>
+          <ul>
+            <li>Gained Practical exposure to injection moulding, recycling.</li>
+            <li>Sustainable plastics manufacturing, bridging theoretical knowledge with real-world applications.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card job">
+        <div class="when">Oct 2025 – Nov 2025<br>Remote</div>
+        <div>
+          <h3>Campus Partner</h3>
+          <div class="org">Perplexity AI</div>
+          <ul>
+            <li>Promoted Perplexity AI across the university community through peer engagement, referrals, and awareness initiatives.</li>
+            <li>Created and curated high-quality educational content on Perplexity Spaces, encouraging responsible AI adoption and collaborative knowledge sharing.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical skills -->
+  <section id="skills" class="alt">
+    <div class="wrap">
+      <h2>Technical skills</h2>
+      <div class="skills">
+        <!-- Replace each <i> with an <img src="logos/solidworks.png" alt=""> when you have the logos -->
+        <div class="skill"><i class="text"><img src="img/autocad.png" alt=""></i>AutoCAD</div>
+        <div class="skill"><i class="text"><img src="img/revit.png" alt=""></i>RIVET</div>
+        <div class="skill"><i class="text"><img src="img/fusion.jpg" alt=""></i>Fusion 360</div>
+        <div class="skill"><i class="text"><img src="img/inventor.png" alt=""></i>Inventor</div>
+        <div class="skill"><i class="text"><img src="img/ansys.png" alt=""></i>ANSYS</div>
+        <div class="skill"><i class="text"><img src="img/catia.png" alt=""></i>CATIA</div>
+        <div class="skill"><i class="text"><img src="img/matlab.gif" alt=""></i>MATLAB</div>
+        <div class="skill"><i class="text"><img src="img/python.webp" alt=""></i>Python</div>
+        <div class="skill"><i class="text"><img src="img/Excel.svg" alt=""></i>Excel</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certification -->
+  <section id="certification">
+    <div class="wrap">
+      <h2>Certifications</h2>
+      <div class="card edu">
+        <div><h3><a href="https://drive.google.com/file/d/1usHz8cwKl0jmpOkJ18G73uZDuMDhSwns/view">ASME MEMBERSHIP</a></h3><div class="meta">ASME (The American Society of Mechanical Engineers)</div></div>
+        <div class="meta">2026 – Present</div>
+      </div>
+      <div class="card edu">
+        <div><h3><a href="https://drive.google.com/file/d/1rMEAETrt9tJJf_c6qiOR7pd2DvKkXh3Y/view">Autodesk Certified Revit MEP for Mechanical</a></h3><div class="meta">Autodesk</div></div>
+        <div class="meta">2025 – Present</div>
+      </div>
+      <div class="card edu">
+        <div><h3><a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=d132687e-efc4-47a7-ab6a-3c67d6c4999a&">MATLAB Onramp</a></h3><div class="meta">MathWorks</div></div>
+        <div class="meta">2025</div>
+      </div>
+      <div class="card edu">
+        <div><h3><a href="https://learn.microsoft.com/en-in/users/godsonvo-6068/achievements/pl9hptj4?ref=https%3A%2F%2Fwww.linkedin.com%2F">Microsoft Azure Data Fundamentals</a></h3><div class="meta">Microsoft</div></div>
+        <div class="meta">2025 – Present</div>
+      </div>
+      <div class="card edu">
+        <div><h3><a href="https://drive.google.com/file/d/1YT1-2GhSGuRLIn78j5Zdr1tvwRowHcfh/view">Young Innovators Program</a></h3><div class="meta">Kerala Development and Innovation Strategic Council</div></div>
+        <div class="meta">2025 – 2026</div>
+      </div>
+    </div>
+  </section>
+  <!-- Education -->
+  <section id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <div class="card edu">
+        <div><h3>B.Tech in Mechanical Engineering</h3><div class="meta"></div>APJ Abdul Kalam Technological University</div>
+        <div class="meta">2022 – 2026</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="alt">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="card proj">
+          <div class="thumb-img"><img class="wheelchair" src="img/wheelchair.jpg" alt=""></div>
+          <div class="body arrow">
+            <h3>DESIGN AND FABRICATION OF AN AUTOMATED CHAIR CUM BED MECHANISM FOR BEDRIDDEN PATIENTS<i class="bx bx-chevron-right-circle"></i></h3>
+            <p>Designed and fabricated an automated electromechanical chair-cum-bed to enhance the autonomy of bedridden patients. By replacing traditional high-maintenance hydraulic systems with a robust rack-and-pinion transmission, I developed a more hygienic, leak-proof, and cost-effective solution for clinical and home-care environments.</p>
+            <div class="tags"><span>SolidWorks</span><span>GD&amp;T</span> <span>IOT</span></div>
+          </div>
+        </article>
+        <article class="card proj">
+          <div class="thumb-img"><img class="cfd" src="img/cfd002.jpg" alt=""></div>
+          <div class="body arrow">
+            <h3>CFD ANALYSIS OF A NON-SYMMETRIC AIRFOIL (NACA 4412)<i class="bx bx-chevron-right-circle"></i></h3>
+            <p>Completed a CFD simulation of a non-symmetric airfoil (NACA 4412) to study airflow characteristics, pressure distribution, and lift 
+                  generation. Gained hands-on understanding of fundamental CFD concepts including mesh generation, boundary conditions, solver
+                  selection, and post-processing of results. Developed practical skills in interpreting aerodynamic behavior, analyzing velocity and 
+                  pressure contours, and validating simulation outcomes. </p>
+            <div class="tags"><span>ANSYS</span><span>FEA</span></div>
+          </div>
+        </article>
+        <article class="card proj">
+          <div class="thumb-img"><img class="cfd" src="img/developer.htm" alt=""></div>
+          <div class="body arrow">
+            <h3 href="https://godsonvo-portfolio.vercel.app/"  target="_blank"><a href="https://godsonvo-portfolio.vercel.app/">VIEW MY FULLSTACK DEVELOPER PORTFOLIO</a><i class="bx bx-chevron-right-circle"></i></h3>
+            <p>I'm a passionate Full Stack developer with experience developing web applications with React.js, and JavaScript Technologies. I am strongly interested in learning new technologies and implementing them in my projects. I'm a self-motivated, disciplined and hardworking individual who is always ready to learn new things and work in a team.</p>
+            <div class="tags"><span>ANSYS</span><span>FEA</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+<div class="ticker-wrapper">
+  <div class="fx-ticker">
+  GODSON V O ✦ MECHANICAL ENGINEERING ✦ WEB DEVELOPMENT ✦ DESIGN ✦ INNOVATION ✦
+  GODSON V O ✦ MECHANICAL ENGINEERING ✦ WEB DEVELOPMENT ✦ DESIGN ✦ INNOVATION ✦
+  GODSON V O ✦MECHANICAL ENGINEERING ✦ WEB DEVELOPMENT ✦ DESIGN ✦ INNOVATION ✦
+  </div>
+</div>
+  
+  <!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="wrap">
+        <h2>Reach out to me</h2>
+        <p>I’m open to graduate engineer roles and internships. Send me a message and I’ll reply within a day.</p>
+        <div class="row" id="contact-links"></div>
+    </div>
 </section>
 
-    <section class="section" id="what-i-do">
-      <div class="container">
-        <div class="section-heading centered">
-          <h2>What I do</h2>
-          <p>CRAZY FRONT END DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK</p>
-        </div>
+</main>
 
-        <div class="what-grid">
-          <div class="code-art" aria-hidden="true">
-            <div class="code-window">
-              <div class="window-dots"><b class="red"></b><b class="orange"></b><b class="green"></b></div>
-              <div class="code-lines">
-                <span>&lt;div <em>class</em>=<strong>"developer"</strong>&gt;</span>
-                <span>&nbsp;&nbsp;&lt;h1&gt;Hello World&lt;/h1&gt;</span>
-                <span>&nbsp;&nbsp;&lt;code&gt;build();&lt;/code&gt;</span>
-                <span>&lt;/div&gt;</span>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h3>Front End Development</h3>
-            <div class="tech-grid">
-              <span class="tech">Python</span>
-              <span class="tech">JS</span><span class="tech">C</span><span class="tech">SQL</span>
-              <span class="tech">HTML5</span><span class="tech">Git</span><span class="tech">CSS</span>
-            </div>
-        
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="proficiency">
-      <div class="container two-col">
-        <div>
-          <div class="section-heading"><h2>Proficiency</h2></div>
-          <div class="skill">
-            <div><span>Frontend/Design</span><strong>85%</strong></div>
-            <div class="progress"><span data-width="85"></span></div>
-          </div>
-          <div class="skill">
-            <div><span>Project Management</span><strong>90%</strong></div>
-            <div class="progress"><span data-width="90"></span></div>
-          </div>
-          <div class="skill">
-            <div><span>Programming</span><strong>95%</strong></div>
-            <div class="progress"><span data-width="95"></span></div>
-          </div>
-        </div>
-        <div class="abstract-art" aria-hidden="true">
-          <div class="orb orb-one"></div><div class="orb orb-two"></div><div class="orb orb-three"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="blue-section" id="education">
-      <div class="container">
-        <div class="section-title-white"><span class="section-icon"><i class="bx bx-education"></i></span><h2>Education</h2></div>
-        <div class="card education-card">
-          <h3>Vidya Academy of Science and Technology</h3>
-          <h4>Bachelor of Technology</h4>
-          <div><span class="badge blue">2022 - 2026</span></div>
-        </div>
-      </div>
-      <div class="white-cut"></div>
-    </section>
-
-
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-title"><span class="section-icon"><i class="bx bx-gaming"></i></span><h2>Projects</h2></div>
-        <div class="projects-grid">
-          <article class="card project-card" ><h3>Interactive Quiz App</h3><p>Created a browser-based quiz using HTML, CSS, and JavaScript, with dynamic question rendering and scoring. Added a leaderboard stored in SQL for tracking performance.</p></article>
-          <article class="card project-card" ><h3>Responsive Portfolio Website</h3><p>Built a personal portfolio using HTML, CSS, and JavaScript, showcasing projects and skills with a responsive design. Implemented smooth navigation and interactive elements to enhance user experience.</p></article>
-          <article class="card project-card" ><h3>Python Data Analyzer</h3><p>Built a simple script in Python to read CSV files and generate summary statistics (mean, median, mode). Used built-in libraries to keep dependencies minimal.</p></article>
-          <article class="card project-card" ><h3>E-commerce Store</h3><p>Developed a full-stack ecommerce web application using React.js frontend and SQL database. Implemented product listings, shopping cart functionality, and secure checkout flow. Designed responsive UI with HTML, CSS, and JavaScript for seamless user experience across devices.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact blue-section" id="contact">
-      <div class="container contact-grid">
-        <div>
-          <h2>Reach Out to me!</h2>
-          <p>DISCUSS A PROJECT OR JUST WANT TO SAY HI? MY INBOX IS OPEN FOR ALL</p>
-          <div class="hero-socials">
-            <a class="round-btn white" href="mailto:godsonvoofficial@gmail.com" aria-label="Email"><i class="bx bx-paper-plane"></i></a>
-            <a class="round-btn linkedin" href="https://www.linkedin.com/in/godsonvo/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-            <a class="round-btn github" href="https://github.com/godsonvo-git" target="_blank" rel="noopener" aria-label="GitHub"><img style="width: 25px;" src="img/github.png" alt=""></a>
-            
-          </div>
-        </div>
-        <img class="profile-photo" src="img/contact-1.png">
-      </div>
-    </section>
-  </main>
-  <footer id="footerText">Copyright &copy; Godson V O</footer>
-  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
-  <script src="script.js"></script>
+<footer id="footerText">Copyright &copy; Godson V O</footer>
+<script src="script.js"></script>
 </body>
 </html>

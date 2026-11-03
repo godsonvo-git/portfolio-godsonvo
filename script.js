@@ -1,147 +1,86 @@
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
-const backTop = document.getElementById("backTop");
-
 // Auto-update copyright year
 const year = new Date().getFullYear();
 document.getElementById("footerText").innerHTML = `&copy; ${year} Godson V O. All rights reserved.`;
 
-menuToggle.addEventListener("click", () => {
-    const open = navMenu.classList.toggle("open");
-    menuToggle.setAttribute("aria-expanded", open);
+
+
+// Social media links
+const socialLinks = [
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/godsonvo" },
+  { name: "GitHub", url: "https://github.com/godsonvo-git" },
+  { name: "Twitter / X", url: "https://x.com/godson_vo" },
+  { name: "Email", url: "mailto:godsonvoofficial@gmail.com" }
+];
+
+// Select containers
+const heroLinks = document.querySelector("#hero-links");
+const contactLinks = document.querySelector("#contact-links");
+
+// Generate links
+socialLinks.forEach(link => {
+  const button = document.createElement("a");
+
+  button.textContent = link.name;
+  button.href = link.url;
+  button.classList.add("pill");
+
+  if (!link.url.startsWith("mailto:")) {
+    button.target = "_blank";
+    button.rel = "noopener noreferrer";
+  }
+
+  // Hero: Exclude Instagram
+  if (link.name !== "Instagram") {
+    heroLinks.appendChild(button.cloneNode(true));
+  }
+
+  // Contact: Email uses btn styling
+  if (link.name === "Email") {
+    button.textContent = "Email me";
+    button.classList.replace("pill", "btn");
+  }
+
+  contactLinks.appendChild(button);
 });
 
-document.querySelectorAll(".nav-menu a").forEach(link => {
-    link.addEventListener("click", () => {
-        navMenu.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-    });
-});
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.querySelectorAll(".progress span").forEach(bar => {
-                bar.style.width = bar.dataset.width + "%";
-            });
-        }
-    });
-}, { threshold: 0.25 });
-
-const proficiency = document.getElementById("proficiency");
-if (proficiency) observer.observe(proficiency);
-
-window.addEventListener("scroll", () => {
-    backTop.classList.toggle("show", window.scrollY > 500);
-});
-
-backTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-/* =========================================
-   INTERACTIVE CUSTOM CURSOR
-========================================= */
-
-const cursorDot = document.querySelector(".cursor-dot");
-const cursorRing = document.querySelector(".cursor-ring");
-
-let mouseX = 0;
-let mouseY = 0;
-
-let ringX = 0;
-let ringY = 0;
-
-
-/* Mouse position */
-document.addEventListener("mousemove", (e) => {
-
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-
-    /* Dot follows instantly */
-    cursorDot.style.left = mouseX + "px";
-    cursorDot.style.top = mouseY + "px";
-
-});
-
-
-/* Smooth ring movement */
-function animateCursor() {
-
-    ringX += (mouseX - ringX) * 0.12;
-    ringY += (mouseY - ringY) * 0.12;
-
-    cursorRing.style.left = ringX + "px";
-    cursorRing.style.top = ringY + "px";
-
-    requestAnimationFrame(animateCursor);
-}
-
-animateCursor();
-
-
-/* =========================================
-   HOVER INTERACTION
-========================================= */
-
-const cursorTargets = document.querySelectorAll(
-    "a, button, .tech, .orb, .card"
+// Resume button
+heroLinks.insertAdjacentHTML(
+  "afterbegin",
+  '<a class="btn" target="_blank" href="img/Godson V O Resume Mechanical.pdf">View my resume</a>'
 );
 
-cursorTargets.forEach((element) => {
-
-    element.addEventListener("mouseenter", () => {
-        cursorRing.classList.add("hover");
-    });
-
-    element.addEventListener("mouseleave", () => {
-        cursorRing.classList.remove("hover");
-    });
-
-});
 
 
-/* =========================================
-   CLICK INTERACTION
-========================================= */
 
-document.addEventListener("mousedown", () => {
-    cursorRing.classList.add("click");
-});
+//<!-- Apply saved theme before the page paints (prevents a flash) -->
+(function () {
+  try {
+    var saved = localStorage.getItem("theme");
+    var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.setAttribute("data-theme", saved || (prefersDark ? "dark" : "light"));
+  } catch (e) { }
+})();
 
-document.addEventListener("mouseup", () => {
-    cursorRing.classList.remove("click");
-});
+// Sun / Moon theme toggle
+(function () {
+  var root = document.documentElement;
+  var toggle = document.getElementById("theme-toggle");
 
-document.addEventListener("mousemove", (e) => {
+  function applyTheme(theme) {
+    root.setAttribute("data-theme", theme);
+    // Moon (dark) = switch on, Sun (light) = switch off
+    toggle.setAttribute("aria-checked", theme === "dark" ? "true" : "false");
+    try { localStorage.setItem("theme", theme); } catch (e) { }
+  }
 
-    const element = document.elementFromPoint(
-        e.clientX,
-        e.clientY
-    );
+  // Sync the button with the theme set in <head>
+  toggle.setAttribute(
+    "aria-checked",
+    root.getAttribute("data-theme") === "dark" ? "true" : "false"
+  );
 
-    if (!element) return;
-
-    const whiteSection =
-        element.closest(".section:not(.blue-section)");
-
-    const whiteElement =
-        element.closest(".resume-btn, .white, .card, .tech");
-
-    const blueSection =
-        element.closest(".hero, .blue-section");
-
-    if ((whiteSection || whiteElement) && !blueSection) {
-
-        cursorDot.classList.add("blue-cursor");
-        cursorRing.classList.add("blue-cursor");
-
-    } else {
-
-        cursorDot.classList.remove("blue-cursor");
-        cursorRing.classList.remove("blue-cursor");
-
-    }
-
-});
+  toggle.addEventListener("click", function () {
+    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    applyTheme(next);
+  });
+})();
